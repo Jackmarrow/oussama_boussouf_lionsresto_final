@@ -23,6 +23,7 @@ $theme-colors : map-merge($theme-colors , $custom-colors);
 $spacer : 8px;
 
 $custom-spacers : (
+    //normal
     0 : 0,
     1 : $spacer*1 ,
     2 : $spacer*1.5,
@@ -33,8 +34,14 @@ $custom-spacers : (
     7 : $spacer*4 ,
     8 : $spacer*4.5,
     9 : $spacer*5 ,
-    10 : $spacer*5.5,  
-    
+    10: $spacer*5.5,
+    //double  
+    11: $spacer*8,
+    12: $spacer*10,
+    13: $spacer*12,
+    //small
+    20: $spacer*0.3,
+    21: $spacer*0.5,
     );
 
 //& Fusionner et écrire nos valeurs d'espacement :
