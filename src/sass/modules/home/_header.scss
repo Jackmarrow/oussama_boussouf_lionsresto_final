@@ -14,20 +14,21 @@
 body {
   font-family: "Peter", sans-serif;
 }
+
 h1,
 h2 {
   font-family: "Amatic", sans-serif;
   font-weight: bold;
 }
 
+li {
+  list-style-type: none;
+}
+
 .wrapper {
   width: 90vw;
   max-width: 1400px;
 }
-// p{
-//     font-family: "Peter", sans-serif;
-// }
-
 //-------------------------------
 
 .navbar {
@@ -41,12 +42,12 @@ h2 {
     font-weight: bold;
 
     li {
-      a {
+      .link {
         position: relative;
         cursor: pointer;
       }
 
-      a::after {
+      .link::after {
         content: "";
         position: absolute;
         left: 0;
@@ -57,13 +58,56 @@ h2 {
         transition: all 300ms;
       }
 
-      a:hover {
+      .link:hover {
         color: black !important;
       }
 
-      a:hover::after {
+      .link:hover::after {
         width: 100%;
       }
+    }
+
+    .dropdown-container {
+        &  .submenu {
+          visibility: hidden;
+          opacity: 0;
+          top: 150%;
+          width: max-content;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          transform: translateY(40px);
+          transition: all 500ms;
+          z-index: 2;
+
+          a:hover{
+            color:$dark-red !important;
+          }
+
+          .deep-submenu{
+            visibility: hidden;
+            opacity: 0;
+            width: max-content;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transform: translateX(40px);
+            top: 25%;
+            left:100%;
+            transition: all 500ms;
+            a:hover{
+                color:$dark-red !important;
+            }
+          }
+
+          li:hover > .deep-submenu{
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0px);
+         }
+        }
+
+        &:hover .submenu {
+         visibility: visible;
+         opacity: 1;
+         transform: translateY(0px);
+        }
     }
   }
 }
@@ -73,6 +117,15 @@ h2 {
     flex-basis: 35%;
     h1 {
       font-size: 3.5rem;
+    }
+
+    .btn-book-table:hover{
+        box-shadow: 0 5px 15px $light-red;
+    }
+
+    .btn-watch-video:hover, .btn-watch-video:hover i{
+        color: $light-red !important;
+        transition: color 300ms;
     }
   }
 

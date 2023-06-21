@@ -16343,6 +16343,10 @@ h2,
   font-weight: bold;
 }
 
+li {
+  list-style-type: none;
+}
+
 .wrapper {
   width: 90vw;
   max-width: 1400px;
@@ -16358,11 +16362,11 @@ h2,
 .navbar .nav-container {
   font-weight: bold;
 }
-.navbar .nav-container li a {
+.navbar .nav-container li .link {
   position: relative;
   cursor: pointer;
 }
-.navbar .nav-container li a::after {
+.navbar .nav-container li .link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -16372,11 +16376,47 @@ h2,
   background-color: #cb1411;
   transition: all 300ms;
 }
-.navbar .nav-container li a:hover {
+.navbar .nav-container li .link:hover {
   color: black !important;
 }
-.navbar .nav-container li a:hover::after {
+.navbar .nav-container li .link:hover::after {
   width: 100%;
+}
+.navbar .nav-container .dropdown-container .submenu {
+  visibility: hidden;
+  opacity: 0;
+  top: 150%;
+  width: max-content;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(40px);
+  transition: all 500ms;
+  z-index: 2;
+}
+.navbar .nav-container .dropdown-container .submenu a:hover {
+  color: #cb1411 !important;
+}
+.navbar .nav-container .dropdown-container .submenu .deep-submenu {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transform: translateX(40px);
+  top: 25%;
+  left: 100%;
+  transition: all 500ms;
+}
+.navbar .nav-container .dropdown-container .submenu .deep-submenu a:hover {
+  color: #cb1411 !important;
+}
+.navbar .nav-container .dropdown-container .submenu li:hover > .deep-submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0px);
+}
+.navbar .nav-container .dropdown-container:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .hero-container .text-description {
@@ -16384,6 +16424,13 @@ h2,
 }
 .hero-container .text-description h1, .hero-container .text-description .h1 {
   font-size: 3.5rem;
+}
+.hero-container .text-description .btn-book-table:hover {
+  box-shadow: 0 5px 15px #de5959;
+}
+.hero-container .text-description .btn-watch-video:hover, .hero-container .text-description .btn-watch-video:hover i {
+  color: #de5959 !important;
+  transition: color 300ms;
 }
 .hero-container .hero-image {
   flex-basis: 40%;
