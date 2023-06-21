@@ -1,0 +1,41 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+//* Mes variables couleurs :
+$dark-red : #cb1411 ;
+$light-red : #de5959 ;
+$light-gray : #eeeeee;
+$footer-color : #201f24;
+$dark-gray : #71748a;
+//* Notre customisations des couleurs :
+$custom-colors : (
+    "dark-red" : $dark-red ,
+    "light-red" : $light-red ,
+    "light-gray": $light-gray,
+    "footer-color": $footer-color,
+    "dark-gray": $dark-gray,
+    );
+
+//* Fusionner les informations avec celles de bootstrap :
+$theme-colors : map-merge($theme-colors , $custom-colors);
+
+//& Notre valeur d'espace :
+$spacer : 8px;
+
+$custom-spacers : (
+    0 : 0,
+    1 : $spacer*1 ,
+    2 : $spacer*1.5,
+    3 : $spacer*2 ,
+    4 : $spacer*2.5 ,
+    5 : $spacer*3 ,
+    6 : $spacer*3.5 ,
+    7 : $spacer*4 ,
+    8 : $spacer*4.5,
+    9 : $spacer*5 ,
+    10 : $spacer*5.5,  
+    
+    );
+
+//& Fusionner et écrire nos valeurs d'espacement :
+$spacers : map-merge($spacers , $custom-spacers );

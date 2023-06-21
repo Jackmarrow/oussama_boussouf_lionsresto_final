@@ -1,0 +1,53 @@
+*{
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+// ------ General style --------
+body{
+    font-family: "Peter", sans-serif;
+}
+h1,h2{
+    font-family: "Amatic", sans-serif;
+    font-weight: bold;
+}
+
+.wrapper{
+    width: 90vw;
+    max-width: 1400px;
+}
+// p{
+//     font-family: "Peter", sans-serif;
+// }
+
+//-------------------------------
+header{
+    .navbar{
+        height: 10vh;
+        .logo{
+            font-family: "Peter", sans-serif;
+            font-weight: bold;
+            // font-size: 1.5rem;
+        }
+        .nav-container{
+            font-weight: bold;
+        }
+    }
+
+    .hero-section{
+        height: 90vh;
+    }
+
+    .hero-section{
+
+        .hero-container{
+            .text-description{
+                width: 30%;
+            }
+            .hero-image{
+                width: 40%;
+            }
+        }
+    }
+}
