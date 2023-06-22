@@ -16347,6 +16347,12 @@ li {
   list-style-type: none;
 }
 
+iframe {
+  width: 100vw;
+  max-width: 768px;
+  height: 400px;
+}
+
 .wrapper {
   width: 90vw;
   max-width: 1400px;
@@ -16428,18 +16434,58 @@ li {
 .hero-container .text-description .btn-book-table:hover {
   box-shadow: 0 5px 15px #de5959;
 }
-.hero-container .text-description .btn-watch-video:hover, .hero-container .text-description .btn-watch-video:hover i {
+.hero-container .text-description .btn-watch-video:hover,
+.hero-container .text-description .btn-watch-video:hover i {
   color: #de5959 !important;
   transition: color 300ms;
+}
+.hero-container .text-description .modal-no-show {
+  visibility: hidden;
+}
+.hero-container .text-description .div-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  transition: 400ms ease-in;
+}
+.hero-container .text-description .div-modal .x-close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+.hero-container .text-description .div-modal .content-modal {
+  z-index: 2;
+  /**/ /* Centrer une div */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /**/ /* animation */
+  transform: translate(-50%, -50%) scale(0);
+  transition: 400ms ease-in;
+}
+.hero-container .text-description .div-modal .active.content-modal {
+  transform: translate(-50%, -50%) scale(1);
 }
 .hero-container .hero-image {
   flex-basis: 40%;
 }
 
 @media (max-width: 426px) {
+  .nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80vw;
+    background-color: white;
+  }
   .hero-container .text-description h1, .hero-container .text-description .h1 {
     font-size: 2.5rem;
   }
+}
+.hide-scroll {
+  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=app.css.map */

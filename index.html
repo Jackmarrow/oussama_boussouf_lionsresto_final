@@ -17,9 +17,11 @@
           <div class="logo fs-3">
             LionsResto<span class="text-dark-red">.</span>
           </div>
+          <!--  start of nav links -->
           <ul
-            class="nav-container d-none d-lg-block nav d-lg-flex align-items-lg-center"
+            class="nav-container d-lg-flex align-items-lg-center"
           >
+          <button class="close-btn bg-transparent border-0"><i class="fa-solid fa-x" style="color: #1234;"></i></button>
             <li class="mx-3">
               <a href="#" class="link nav-link text-dark-gray px-20">Home</a>
             </li>
@@ -59,6 +61,7 @@
               <a href="#" class="link nav-link text-dark-gray px-20">Contact</a>
             </li>
           </ul>
+          <!-- end of nav links -->
           <div>
             <button class="btn btn-dark-red py-1 px-4 rounded-pill">
               Connexion
@@ -89,12 +92,21 @@
                 <button class="btn-book-table btn btn-dark-red py-2 px-8 rounded-pill me-7">
                   Book a Table
                 </button>
-                <button class="btn-watch-video btn border-0 d-flex align-items-center">
+                <button id="firstVideo" class="btn-open-modal btn-watch-video btn border-0 d-flex align-items-center">
                   <i
                     class="fa-regular fa-circle-play fa-2x me-1 text-dark-red"
                   ></i>
                   Watch Video
                 </button>
+                <div>
+                  <div class="div-modal modal-no-show" id="firstVideo">
+                    <button class="btn-close-modal x-close-modal bg-transparent border-0" id="firstVideo"> <i class="fa-solid fa-x fa-2x" style="color: #ffff;"></i> </button>
+                    <div class="content-modal">
+                      <p>Hello wolrd</p>
+                        <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+              </div>
               </div>
             </div>
             <div class="hero-image mb-7">

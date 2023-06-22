@@ -25,6 +25,12 @@ li {
   list-style-type: none;
 }
 
+iframe {
+  width: 100vw;
+  max-width: 768px;
+  height: 400px;
+}
+
 .wrapper {
   width: 90vw;
   max-width: 1400px;
@@ -68,46 +74,46 @@ li {
     }
 
     .dropdown-container {
-        &  .submenu {
+      & .submenu {
+        visibility: hidden;
+        opacity: 0;
+        top: 150%;
+        width: max-content;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        transform: translateY(40px);
+        transition: all 500ms;
+        z-index: 2;
+
+        a:hover {
+          color: $dark-red !important;
+        }
+
+        .deep-submenu {
           visibility: hidden;
           opacity: 0;
-          top: 150%;
           width: max-content;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-          transform: translateY(40px);
+          transform: translateX(40px);
+          top: 25%;
+          left: 100%;
           transition: all 500ms;
-          z-index: 2;
-
-          a:hover{
-            color:$dark-red !important;
+          a:hover {
+            color: $dark-red !important;
           }
-
-          .deep-submenu{
-            visibility: hidden;
-            opacity: 0;
-            width: max-content;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            transform: translateX(40px);
-            top: 25%;
-            left:100%;
-            transition: all 500ms;
-            a:hover{
-                color:$dark-red !important;
-            }
-          }
-
-          li:hover > .deep-submenu{
-            visibility: visible;
-            opacity: 1;
-            transform: translateX(0px);
-         }
         }
 
-        &:hover .submenu {
-         visibility: visible;
-         opacity: 1;
-         transform: translateY(0px);
+        li:hover > .deep-submenu {
+          visibility: visible;
+          opacity: 1;
+          transform: translateX(0px);
         }
+      }
+
+      &:hover .submenu {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+      }
     }
   }
 }
@@ -119,13 +125,46 @@ li {
       font-size: 3.5rem;
     }
 
-    .btn-book-table:hover{
-        box-shadow: 0 5px 15px $light-red;
+    .btn-book-table:hover {
+      box-shadow: 0 5px 15px $light-red;
     }
 
-    .btn-watch-video:hover, .btn-watch-video:hover i{
-        color: $light-red !important;
-        transition: color 300ms;
+    .btn-watch-video:hover,
+    .btn-watch-video:hover i {
+      color: $light-red !important;
+      transition: color 300ms;
+    }
+
+    .modal-no-show {
+      visibility: hidden;
+
+    }
+
+    .div-modal {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1;
+      transition: 400ms ease-in;
+
+      .x-close-modal {
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+      }
+      .content-modal {
+        z-index: 2;
+        /**/ /* Centrer une div */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /**/ /* animation */
+        transform: translate(-50%, -50%) scale(0);
+        transition: 400ms ease-in;
+      }
+      .active.content-modal {
+        transform: translate(-50%, -50%) scale(1);
+      }
     }
   }
 
@@ -136,6 +175,15 @@ li {
 
 //-----------------------------
 @media (max-width: 426px) {
+  .nav-container{
+    position: fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    width:80vw;
+    background-color: white;
+  }
+
   .hero-container {
     .text-description {
       h1 {
@@ -143,4 +191,10 @@ li {
       }
     }
   }
+}
+
+//------------- State Style---------
+
+.hide-scroll{
+  overflow-y: hidden;
 }
