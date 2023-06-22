@@ -19,29 +19,31 @@
           </div>
           <!--  start of nav links -->
           <ul
-            class="nav-container d-lg-flex align-items-lg-center"
+            id="navLinks" class="nav-container d-lg-flex align-items-lg-center"
           >
-          <button class="close-btn bg-transparent border-0"><i class="fa-solid fa-x" style="color: #1234;"></i></button>
-            <li class="mx-3">
-              <a href="#" class="link nav-link text-dark-gray px-20">Home</a>
+          <!-- close button-->
+          <button id="btnClose" class="close-btn bg-transparent border-0 d-lg-none mt-2 me-4"><i class="fa-solid fa-x" style="color: #1234;"></i></button>
+           <!-- close button end-->
+            <li class="mt-10 mt-lg-0 mx-lg-3">
+              <a href="#" class="link nav-link text-dark-gray px-6 py-2 py-lg-0 px-lg-20">Home</a>
             </li>
-            <li class="mx-3">
-              <a href="#" class="link nav-link text-dark-gray px-20">About</a>
+            <li class="mx-lg-3">
+              <a href="#" class="link nav-link text-dark-gray px-6 py-2 py-lg-0 px-lg-20">About</a>
             </li>
-            <li class="mx-3">
-              <a href="#" class="link nav-link text-dark-gray px-20">Menu</a>
+            <li class="mx-lg-3">
+              <a href="#" class="link nav-link text-dark-gray px-6 py-2 py-lg-0 px-lg-20">Menu</a>
             </li>
-            <li class="mx-3">
-              <a href="#" class="link nav-link text-dark-gray px-20">Events</a>
+            <li class="mx-lg-3">
+              <a href="#" class="link nav-link text-dark-gray px-6 py-2 py-lg-0 px-lg-20">Events</a>
             </li>
-            <li class="mx-3">
-              <a href="#" class="link nav-link text-dark-gray px-20">Chefs</a>
+            <li class="mx-lg-3">
+              <a href="#" class="link nav-link text-dark-gray px-6 py-2 py-lg-0 px-lg-20">Chefs</a>
             </li>
-            <li class="mx-3">
-              <a href="#" class="link nav-link text-dark-gray px-20">Gallery</a>
+            <li class="mx-lg-3">
+              <a href="#" class="link nav-link text-dark-gray px-6 py-2 py-lg-0 px-lg-20">Gallery</a>
             </li>
-            <li class="dropdown-container mx-3 position-relative">
-                <a href="#" class="link nav-link text-dark-gray px-20">Drop Down<i class="fa-solid fa-angle-down ms-1" style="color:lightgray"></i></a>
+            <li class="dropdown-container mx-lg-3 position-relative">
+                <a href="#" class="link nav-link text-dark-gray px-6 py-2 py-lg-0 px-lg-20 d-flex justify-content-between d-lg-block">Drop Down<i class="fa-solid fa-angle-down ms-1" style="color:lightgray"></i></a>
                 <ul class="submenu position-absolute bg-white px-4 rounded-2">
                     <li class="py-2"><a href="" class="nav-link text-dark-gray">Drop Down 1</a></li>
                     <li class="py-2"><a href="" class="nav-link text-dark-gray">
@@ -57,8 +59,8 @@
                     <li class="py-2"><a href="" class="nav-link text-dark-gray">Drop Down 4</a></li>
                 </ul>
             </li>
-            <li class="mx-3">
-              <a href="#" class="link nav-link text-dark-gray px-20">Contact</a>
+            <li class="mx-lg-3">
+              <a href="#" class="link nav-link text-dark-gray px-6 py-2 py-lg-0 px-lg-20">Contact</a>
             </li>
           </ul>
           <!-- end of nav links -->
@@ -66,7 +68,7 @@
             <button class="btn btn-dark-red py-1 px-4 rounded-pill">
               Connexion
             </button>
-            <button class="btn ms-3 d-lg-none">
+            <button id="openMenu" class="btn ms-3 d-lg-none border-0">
               <i class="fa-solid fa-bars fa-2x" style="color: #5e5f62"></i>
             </button>
           </div>
@@ -121,6 +123,25 @@
       </section>
     </header>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- overlay (transparent white background) -->
+    <div class="overlay"></div>
+    <!-- end of overlay -->
     <script src="./public/js/app.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
   </body>

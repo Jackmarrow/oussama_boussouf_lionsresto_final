@@ -16358,6 +16358,17 @@ iframe {
   max-width: 1400px;
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  visibility: hidden;
+}
+
+.active.overlay {
+  visibility: visible;
+}
+
 .navbar {
   height: 10vh;
 }
@@ -16474,11 +16485,21 @@ iframe {
 @media (max-width: 426px) {
   .nav-container {
     position: fixed;
+    z-index: 10;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 80vw;
+    width: 90vw;
+    border-left: 1px solid lightgray;
     background-color: white;
+    transform: translateX(100%);
+    transition: 400ms ease-in;
+  }
+  .nav-container.active {
+    transform: translateX(0%);
+  }
+  .nav-container .close-btn {
+    float: right;
   }
   .hero-container .text-description h1, .hero-container .text-description .h1 {
     font-size: 2.5rem;

@@ -1,3 +1,20 @@
+//!----------------- Nav menu Logic --------------------
+
+let btn_close = document.querySelector("#btnClose");
+let open_menu = document.querySelector("#openMenu");
+let navlinks_container = document.querySelector("#navLinks");
+let overlay = document.querySelector(".overlay");
+
+open_menu.addEventListener("click", ()=>{
+    navlinks_container.classList.add("active");
+    overlay.classList.add("active");
+})
+
+btn_close.addEventListener("click", ()=>{
+    navlinks_container.classList.remove("active");
+    overlay.classList.remove("active");
+})
+//!----------------------------------------------------
 
 
 //! ---------------- Modal Logic ----------------------
