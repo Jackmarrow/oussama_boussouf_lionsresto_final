@@ -1,0 +1,47 @@
+.main-section{
+    // ------ default style --------
+    h2{
+        font-size: 3rem;
+    }
+
+    p{
+        color: $dark-gray;
+    }
+
+    .wrapper-main{
+        width: 90vw;
+        max-width: 1400px;
+    }
+    //------------------
+
+    // -------- About us ---------
+    .about-us-container{
+        .restaurant-img{
+            min-height: 31.25rem;
+            width: 100%;
+            left: 0;
+            right: 0;
+            background-image: url(../images/about.jpg);
+            background-position: top-left;
+            background-repeat: no-repeat;
+            flex-basis: 55%;
+            .phone-number{
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    
+        .video-desc{
+            flex-basis: 40%;
+            li::before{
+                content:url("../../../../public/images/double-check.png");
+            }
+        }
+    }
+
+    // ------ End of about us -------
+}
+
+// ------- desktop responive responsive-------------
+
