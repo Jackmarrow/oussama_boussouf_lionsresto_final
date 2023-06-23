@@ -7,6 +7,8 @@ $light-red : #de5959 ;
 $light-gray : #eeeeee;
 $footer-color : #201f24;
 $dark-gray : #71748a;
+$light-pink: #fae7e9;
+$color-para: #b7b2a8;
 //* Notre customisations des couleurs :
 $custom-colors : (
     "dark-red" : $dark-red ,
@@ -14,6 +16,8 @@ $custom-colors : (
     "light-gray": $light-gray,
     "footer-color": $footer-color,
     "dark-gray": $dark-gray,
+    "light-pink": $light-pink,
+    "color-para": $color-para,
     );
 
 //* Fusionner les informations avec celles de bootstrap :
@@ -39,6 +43,8 @@ $custom-spacers : (
     11: $spacer*8,
     12: $spacer*10,
     13: $spacer*12,
+    14: $spacer*14,
+    15: $spacer*16,
     //small
     20: $spacer*0.3,
     21: $spacer*0.5,

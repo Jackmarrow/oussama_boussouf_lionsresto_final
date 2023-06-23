@@ -35,13 +35,76 @@
         .video-desc{
             flex-basis: 40%;
             li::before{
-                content:url("../../../../public/images/double-check.png");
+                content:url("../images/double-check.png");
             }
         }
     }
 
     // ------ End of about us -------
+
+    // ------- why us ---------
+    .why-us{
+        .red-lions{
+            flex-basis: 60%;
+
+            .btn-learn-more:hover{
+                background-color: white !important;
+                color: $light-red !important;
+            }
+
+        }
+        
+        .info-card{
+            transition: all 200ms;
+
+            .icon-container{
+                width: 70px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .info-card:hover{
+            transform: scale(1.07);
+        }
+    }
+    // ------- end of why us ---------
+
+    // ------- general info ----------
+    .general-info{
+        background-image: url("../images/stats-bg.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: darken;
+        background-attachment: fixed;
+        .info-container{
+            width: 80vw;
+            max-width: 1100px;
+            h3{
+                font-size: 2.8rem;
+            }
+        }
+    }
 }
 
 // ------- desktop responive responsive-------------
 
+
+
+// @media((min-width:426px) and (max-width:768px)){
+//     main{
+//  // ------- general info ----------
+//     .general-info{
+//         .info-container{
+//             display: grid;
+//             grid-template-columns: repeat(2, 1fr);
+//         }
+//     }
+
+//  }
+
+// }

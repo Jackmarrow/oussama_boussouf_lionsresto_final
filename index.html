@@ -10,7 +10,7 @@
     <!--  header section  -->
     <header>
       <!--  navbar section  -->
-      <nav class="navbar">
+      <nav class="navbar bg-white border-bottom">
         <div
           class="wrapper d-flex align-items-center justify-content-between mx-auto"
         >
@@ -40,7 +40,7 @@
             </li>
             <li class="mx-lg-3">
               <a
-                href="#"
+                href="#about-us"
                 class="link nav-link text-dark-gray px-6 py-2 py-lg-0 px-lg-20"
                 >About</a
               >
@@ -145,6 +145,9 @@
             </button>
           </div>
         </div>
+        <!-- overlay (transparent white background) -->
+        <div class="overlay"></div>
+        <!-- end of overlay -->
       </nav>
       <!-- end of navbar section  -->
 
@@ -204,7 +207,7 @@
                 <!--  end of modal video -->
               </div>
             </div>
-            <div class="hero-image mb-7">
+            <div class="hero-image mb-7 mb-lg-0">
               <img
                 class="w-100"
                 src="./public/images/hero-img.png"
@@ -221,7 +224,7 @@
     <!--  main section -->
     <main class="main-section">
       <!--  about us section -->
-      <section class="about-us py-13">
+      <section id="about-us" class="about-us py-13">
         <p class="text-dark-gray text-center mb-3">ABOUT US</p>
         <h2 class="text-center mb-10">
           Learn More <span class="text-dark-red"> About Us </span>
@@ -308,11 +311,115 @@
         </div>
       </section>
       <!--  end of about us section -->
+
+      <!--  why us section -->
+      <section class="why-us bg-light-gray py-12">
+        <div class="wrapper mx-auto">
+          <div
+            class="d-flex flex-column flex-lg-row align-items-lg-center gap-5"
+          >
+            <div class="red-lions bg-dark-red p-6 text-center">
+              <h3 class="fw-bold text-white fs-1 mb-6 text-start">
+                Why Choose LionsResto?
+              </h3>
+              <p class="text-light-gray mb-6 text-start">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
+                iure omnis deserunt cumque officiis exercitationem sed!
+                Consectetur, dicta! Ipsam impedit nemo soluta culpa natus
+                delectus unde illo, atque possimus numquam explicabo ipsa fugit
+                sequi sapiente.
+              </p>
+              <button
+                class="btn-learn-more btn py-1 px-7 rounded-pill bg-light-red text-white"
+              >
+                Learn More
+              </button>
+            </div>
+            <div class="info-card text-center bg-white p-10 h-75">
+              <div class="icon-container my-5 bg-light-pink rounded-circle mx-auto">
+                <i
+                  class="fa-solid fa-chart-simple fa-2x"
+                  style="color: #cb1411"
+                ></i>
+              </div>
+              <h4 class="mb-6">Corporis volupates officia eiusmod</h4>
+              <p class="mb-5">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam, ab?
+              </p>
+            </div>
+            <div class="info-card text-center bg-white p-10 h-75">
+              <div class="icon-container my-5 bg-light-pink rounded-circle mx-auto">
+                <i class="fa-regular fa-gem fa-2x" style="color: #cb1411"></i>
+              </div>
+              <h4 class="mb-6">Corporis volupates officia eiusmod</h4>
+              <p class="mb-5">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam, ab?
+              </p>
+            </div>
+            <div class="info-card text-center bg-white p-10 h-75">
+              <div class="icon-container my-5 bg-light-pink rounded-circle mx-auto">
+                <i class="fa-solid fa-inbox fa-2x" style="color: #cb1411"></i>
+              </div>
+              <h4 class="mb-6">Corporis volupates officia eiusmod</h4>
+              <p class="mb-5">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam, ab?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!--  end of why us -->
+
+       <!-- general info  -->
+       <section class="general-info d-flex justify-content-center position-relative py-13 py-lg-15">
+         <div class="info-container text-center d-md-flex justify-content-between">
+            <div class="mb-12 mb-sm-0 ">
+              <h3 class="text-white fw-bold mb-1">232</h3>
+              <p class="fw-bold text-color-para">Clients</p>
+             </div>
+             <div class="mb-12 mb-sm-0 ">
+               <h3 class="text-white fw-bold mb-1">521</h3>
+               <p class="fw-bold text-color-para">Projects</p>
+             </div>
+              <div class="mb-12 mb-sm-0 ">
+                <h3 class="text-white fw-bold mb-1">1 453</h3>
+                <p class="fw-bold text-color-para">Hours Of Support</p>
+              </div>
+              <div class="col-lg-1">
+                <h3 class="text-white fw-bold mb-1">32</h3>
+                <p class="fw-bold text-color-para">Workers</p>
+              </div>
+          </div>
+        </section>
     </main>
 
-    <!-- overlay (transparent white background) -->
-    <div class="overlay"></div>
-    <!-- end of overlay -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="./public/js/app.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
   </body>
