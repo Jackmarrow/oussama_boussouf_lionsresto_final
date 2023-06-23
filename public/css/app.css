@@ -17377,7 +17377,7 @@ iframe {
   left: 0;
   bottom: -0.3rem;
   width: 0%;
-  height: 0.1rem;
+  height: 0.15rem;
   background-color: #cb1411;
   transition: all 300ms;
 }
@@ -17573,6 +17573,21 @@ iframe {
 }
 .main-section .general-info .info-container h3, .main-section .general-info .info-container .h3 {
   font-size: 2.8rem;
+}
+.main-section .our-menu .tab-link {
+  border-bottom: 3px solid #71748a;
+}
+.main-section .our-menu .tab-link.active {
+  color: #cb1411 !important;
+  border-color: #cb1411;
+}
+
+@media (min-width: 769px) {
+  main .our-menu .grid-system {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 5rem;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -89,10 +89,42 @@
             }
         }
     }
+    // ------- end of general info ----------
+
+    // ------- our menu section -------
+
+    .our-menu{
+
+        .tab-link{
+            border-bottom: 3px solid $dark-gray;
+        }
+
+        .tab-link.active{
+            color: $dark-red !important;
+            border-color: $dark-red;
+        }
+
+       
+        
+    }
+    
 }
 
 // ------- desktop responive responsive-------------
 
+
+@media(min-width: 769px){
+
+    main{
+        .our-menu{
+            .grid-system{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 5rem;
+            }
+        }
+    }
+}
 
 
 // @media((min-width:426px) and (max-width:768px)){
