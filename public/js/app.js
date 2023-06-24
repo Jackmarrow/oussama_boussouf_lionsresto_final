@@ -1,3 +1,17 @@
+//!----------------- Arrow back to logic -----------
+let arrow_to_top = document.querySelector(".arrow-back-top");
+document.addEventListener("scroll", () =>{
+    if(document.documentElement.scrollTop >= 250){
+        arrow_to_top.classList.add("show-on");
+    } else{
+        if(arrow_to_top.className.includes("show-on")){
+            arrow_to_top.classList.remove("show-on");
+        }
+    }
+})
+
+
+
 //!----------------- Nav menu Logic --------------------
 
 let btn_close = document.querySelector("#btnClose");

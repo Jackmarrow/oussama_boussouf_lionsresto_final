@@ -7,11 +7,6 @@
     p{
         color: $dark-gray;
     }
-
-    .wrapper-main{
-        width: 90vw;
-        max-width: 1400px;
-    }
     //------------------
 
     // -------- About us ---------
@@ -40,7 +35,7 @@
         }
     }
 
-    // ------ End of about us -------
+    // -----------------
 
     // ------- why us ---------
     .why-us{
@@ -103,19 +98,47 @@
             color: $dark-red !important;
             border-color: $dark-red;
         }
-
-       
-        
     }
+
+    // -------end of our menu section -------
     
+    // ------- chef section -------
+    .chef-section{
+        .card{
+            transition: all 500ms;
+
+            .wave-shape{
+                position: absolute;
+                bottom: -1px;
+            }
+
+            .social-media{
+                right: 2%;
+                top: 10%;
+                transform: translateX(120%);
+                background-color: rgba(255, 255, 255, 0.4);
+                transition: all 500ms 500ms;
+                i{
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+        .card:hover{
+            transform: scale(1.08);
+            .social-media{
+                transform: translateX(0%);
+            }
+        }
+    }
 }
 
-// ------- desktop responive responsive-------------
+// ------- desktop responivenace -------------
 
 
 @media(min-width: 769px){
 
-    main{
+    .main-section{
         .our-menu{
             .grid-system{
                 display: grid;
@@ -123,20 +146,53 @@
                 row-gap: 5rem;
             }
         }
+
+        .chef-section{
+            .grid-system{
+                display: grid;
+                column-gap: 1.5rem;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
     }
 }
+// ------- between mobile and tablet responivenace -------------
 
+@media((min-width:426px) and (max-width:768px)){
+    .main-section{
+ // ------- general info ----------
+    .general-info{
+        .info-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 5rem;
+        }
+    }
+    
+    .chef-section{
+        .grid-system{
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+ }
 
-// @media((min-width:426px) and (max-width:768px)){
-//     main{
-//  // ------- general info ----------
-//     .general-info{
-//         .info-container{
-//             display: grid;
-//             grid-template-columns: repeat(2, 1fr);
-//         }
-//     }
+}
 
-//  }
+//----------- arrow back top --------
+.arrow-back-top{
+    height: 3rem ;
+    width: 3rem ;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ;
+}
 
-// }
+.arrow-back-top.show-on{
+    opacity: 1;
+    visibility: visible;
+}

@@ -17446,7 +17446,7 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  .nav-container {
+  .navbar .nav-container {
     position: fixed;
     z-index: 5;
     top: 0;
@@ -17458,15 +17458,15 @@ iframe {
     transform: translateX(100%);
     transition: 400ms ease-in;
   }
-  .nav-container.active {
+  .navbar .nav-container.active {
     transform: translateX(0%);
   }
-  .nav-container .close-btn {
+  .navbar .nav-container .close-btn {
     float: right;
   }
 }
 @media (max-width: 426px) {
-  .nav-container {
+  .navbar .nav-container {
     width: 90vw;
   }
   .hero-container .text-description h1, .hero-container .text-description .h1 {
@@ -17512,10 +17512,6 @@ iframe {
 }
 .main-section p {
   color: #71748a;
-}
-.main-section .wrapper-main {
-  width: 90vw;
-  max-width: 1400px;
 }
 .main-section .about-us-container .restaurant-img {
   min-height: 31.25rem;
@@ -17581,13 +17577,69 @@ iframe {
   color: #cb1411 !important;
   border-color: #cb1411;
 }
+.main-section .chef-section .card {
+  transition: all 500ms;
+}
+.main-section .chef-section .card .wave-shape {
+  position: absolute;
+  bottom: -1px;
+}
+.main-section .chef-section .card .social-media {
+  right: 2%;
+  top: 10%;
+  transform: translateX(120%);
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 500ms 500ms;
+}
+.main-section .chef-section .card .social-media i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.main-section .chef-section .card:hover {
+  transform: scale(1.08);
+}
+.main-section .chef-section .card:hover .social-media {
+  transform: translateX(0%);
+}
 
 @media (min-width: 769px) {
-  main .our-menu .grid-system {
+  .main-section .our-menu .grid-system {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 5rem;
   }
+  .main-section .chef-section .grid-system {
+    display: grid;
+    column-gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media ((min-width: 426px) and (max-width: 768px)) {
+  .main-section .general-info .info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5rem;
+  }
+  .main-section .chef-section .grid-system {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.arrow-back-top {
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms;
+}
+
+.arrow-back-top.show-on {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=app.css.map */
