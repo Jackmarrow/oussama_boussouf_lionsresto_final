@@ -17329,7 +17329,7 @@ li {
   list-style-type: none;
 }
 
-iframe {
+.video-show {
   width: 100vw;
   max-width: 768px;
   height: 400px;
@@ -17601,6 +17601,16 @@ iframe {
 .main-section .chef-section .card:hover .social-media {
   transform: translateX(0%);
 }
+.main-section .contact-us iframe {
+  height: 35vh;
+}
+.main-section .contact-us .icon-container {
+  width: 55px;
+  height: 55px;
+}
+.main-section .contact-us .icon-container + div p {
+  font-size: 0.85rem;
+}
 
 @media (min-width: 769px) {
   .main-section .our-menu .grid-system {
@@ -17628,6 +17638,11 @@ iframe {
     grid-column-start: 1;
     grid-column-end: 4;
   }
+  .main-section .contact-us .grid-system {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media ((min-width: 426px) and (max-width: 768px)) {
   .main-section .general-info .info-container {
@@ -17648,6 +17663,11 @@ iframe {
   .main-section .book-table .form-input .grid-system .message {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+  .main-section .contact-us .grid-system {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .arrow-back-top {

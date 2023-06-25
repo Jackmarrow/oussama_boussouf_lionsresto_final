@@ -131,6 +131,22 @@
             }
         }
     }
+    // ------- contact us section -------
+    .contact-us{
+
+        iframe{
+            height:35vh;
+        }
+
+        .icon-container{
+            width: 55px;
+            height: 55px;
+
+            & + div p{
+                font-size: .85rem;
+            }
+        }
+    }
 }
 
 // ------- desktop responivenace -------------
@@ -139,6 +155,8 @@
 @media(min-width: 769px){
 
     .main-section{
+        // ------- our menu section -------
+
         .our-menu{
             .grid-system{
                 display: grid;
@@ -146,7 +164,7 @@
                 row-gap: 5rem;
             }
         }
-
+         // ------- chef section -------
         .chef-section{
             .grid-system{
                 display: grid;
@@ -154,7 +172,7 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-
+        // ----- book a table section ------
         .book-table{
 
             .image{
@@ -173,6 +191,15 @@
                         grid-column-end: 4;
                     }
                 }
+            }
+        }
+
+        //-------
+        .contact-us{
+            .grid-system{
+                display: grid;
+                gap: 1.2rem;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     }
@@ -212,6 +239,15 @@
             }
         }
     }
+
+        //-------
+        .contact-us{
+            .grid-system{
+                display: grid;
+                gap: 1.2rem;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
  }
 
 }
