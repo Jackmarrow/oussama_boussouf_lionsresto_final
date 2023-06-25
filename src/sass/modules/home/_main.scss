@@ -154,6 +154,27 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
+
+        .book-table{
+
+            .image{
+                flex:1;
+            }
+
+            .form-input{
+                flex:2;
+                .grid-system{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1.2rem;
+
+                    .message{
+                        grid-column-start: 1;
+                        grid-column-end: 4;
+                    }
+                }
+            }
+        }
     }
 }
 // ------- between mobile and tablet responivenace -------------
@@ -174,6 +195,21 @@
             display: grid;
             gap: 1.5rem;
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .book-table{
+        .form-input{
+            .grid-system{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+
+                .message{
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+            }
         }
     }
  }
