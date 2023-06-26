@@ -1,3 +1,74 @@
+//!----------------- carousel logic --------------
+let dots = document.querySelectorAll(".dot");
+let carousel_images = document.querySelector(".carousel-scroll");
+let images = carousel_images.children;
+let size = images[0].clientWidth;
+let viewport_width = window.innerWidth;
+let carousel_width = size * 3;
+let slid_percentage = (size * 100) / carousel_width;
+//----------
+carousel_images.style.setProperty(
+  "--scroll-left",
+  `-${slid_percentage}%`
+);
+
+window.addEventListener("resize", resizeViewPort);
+
+function resizeViewPort() {
+  viewport_width = window.innerWidth;
+  if(viewport_width <= 768){
+    size = images[0].clientWidth;
+    carousel_width = size;
+    slid_percentage = (size * 100) / carousel_width;
+  }
+   else {
+    size = images[0].clientWidth;
+    carousel_width = size * 3;
+    slid_percentage = (size * 100) / carousel_width;
+    dots.forEach( dot => {
+      if(dot.className.includes("active")){
+        slidImageBig(dot, slid_percentage);
+      }
+    })
+  }
+}
+
+// // ------- active dot -------
+dots.forEach( dot => {
+    dot.addEventListener("click", () => {
+        for (let i = 0; i < dots.length; i++) {
+          const element = dots[i];
+          if (element.className.includes("active")) {
+            element.classList.remove("active");
+          }
+        }
+        dot.classList.add("active");
+        slidImageBig(dot, slid_percentage);
+      })
+    })
+// //----------------------------
+function slidImageBig(dot, slid_percentage) {
+
+  if (dot.className.includes("dot-3")) {
+    carousel_images.style.setProperty(
+      "--scroll-left",
+      `-${slid_percentage * 2}%`
+    );
+  } else if (dot.className.includes("dot-2")) {
+    carousel_images.style.setProperty(
+      "--scroll-left",
+      `-${slid_percentage}%`
+    );
+  } else{
+    carousel_images.style.setProperty(
+      "--scroll-left",
+      `0`
+    );
+  }
+}
+
+
+
 //!----------------- Arrow back to logic -----------
 let arrow_to_top = document.querySelector(".arrow-back-top");
 document.addEventListener("scroll", () =>{

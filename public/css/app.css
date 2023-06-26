@@ -17577,6 +17577,45 @@ li {
   color: #cb1411 !important;
   border-color: #cb1411;
 }
+.main-section .event-section .carousel {
+  margin-bottom: 1rem;
+  height: 426px;
+  max-width: 1400px;
+  overflow: hidden;
+}
+.main-section .event-section .carousel .carousel-scroll {
+  --scroll-left: 0;
+  transform: translateX(var(--scroll-left));
+  transition: all 500ms;
+}
+.main-section .event-section .carousel .image {
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 426px;
+  min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+.main-section .event-section .carousel .image-1 {
+  background-image: url("../images/events-1.jpg");
+}
+.main-section .event-section .carousel .image-2 {
+  background-image: url("../images/events-2.jpg");
+}
+.main-section .event-section .carousel .image-3 {
+  background-image: url("../images/events-3.jpg");
+}
+.main-section .event-section .dots .dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: lightgray;
+  cursor: pointer;
+}
+.main-section .event-section .dots .dot.active {
+  background-color: darkred;
+}
 .main-section .chef-section .card {
   transition: all 500ms;
 }
@@ -17617,6 +17656,9 @@ li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 5rem;
+  }
+  .main-section .event-section .carousel .image {
+    min-width: 33.33%;
   }
   .main-section .chef-section .grid-system {
     display: grid;
