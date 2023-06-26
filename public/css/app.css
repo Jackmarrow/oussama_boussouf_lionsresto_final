@@ -17602,7 +17602,7 @@ li {
   transform: translateX(0%);
 }
 .main-section .contact-us iframe {
-  height: 35vh;
+  height: 300px;
 }
 .main-section .contact-us .icon-container {
   width: 55px;
@@ -17638,10 +17638,26 @@ li {
     grid-column-start: 1;
     grid-column-end: 4;
   }
+  .main-section .contact-us iframe {
+    height: 50vh;
+  }
   .main-section .contact-us .grid-system {
     display: grid;
     gap: 1.2rem;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .main-section .send-message .grid-send-message {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-section .send-message .grid-send-message .third-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .main-section .send-message .grid-send-message .fourth-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 @media ((min-width: 426px) and (max-width: 768px)) {

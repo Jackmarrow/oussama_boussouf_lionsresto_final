@@ -135,7 +135,7 @@
     .contact-us{
 
         iframe{
-            height:35vh;
+            height:300px;
         }
 
         .icon-container{
@@ -196,10 +196,31 @@
 
         //-------
         .contact-us{
+
+            iframe{
+                height:50vh;
+            }
             .grid-system{
                 display: grid;
                 gap: 1.2rem;
                 grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        //-------
+        .send-message{
+            .grid-send-message{
+                display: grid;
+                gap: 1.2rem;
+                grid-template-columns: repeat(2, 1fr);
+                .third-child{
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }   
+                .fourth-child{
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }   
             }
         }
     }
