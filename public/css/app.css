@@ -17597,6 +17597,15 @@ li {
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
 }
+.main-section .event-section .carousel .image .text-content {
+  left: 1.5rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+.main-section .event-section .carousel .image .text-content h3, .main-section .event-section .carousel .image .text-content .h3 {
+  display: inline-block;
+  border-bottom: 2px solid #cb1411;
+}
 .main-section .event-section .carousel .image-1 {
   background-image: url("../images/events-1.jpg");
 }
