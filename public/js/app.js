@@ -33,7 +33,7 @@ function resizeViewPort() {
   }
 }
 
-// // ------- active dot -------
+// ------- active dot -------
 dots.forEach( dot => {
     dot.addEventListener("click", () => {
         for (let i = 0; i < dots.length; i++) {
@@ -102,6 +102,8 @@ btn_close.addEventListener("click", ()=>{
 //!----------------------------------------------------
 
 
+
+
 //! ---------------- Modal Logic ----------------------
 let btn_open_modal = document.querySelectorAll(".btn-open-modal");
 let div_modal = document.querySelectorAll(".div-modal");
@@ -133,6 +135,8 @@ for (let index = 0; index < btn_open_modal.length; index++) {
         if (idBtnOpen == idDiv) {
             btn_open_modal[index].addEventListener("click" , () => {
                 openModal(div_modal[idx])
+                let iframe = div_modal[index].querySelector("iframe");
+                iframe.src = "https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1";
             })
         }
 
@@ -143,6 +147,8 @@ for (let index = 0; index < btn_open_modal.length; index++) {
             if (idBtnClose == idDiv) {
                 btn_close_modal[i].addEventListener("click" , () => {
                     closeModal(div_modal[idx]);
+                    let iframe = div_modal[index].querySelector("iframe");
+                    iframe.src = "https://www.youtube.com/embed/LXb3EKWsInQ?pause=1";
                 })
             }
         }
