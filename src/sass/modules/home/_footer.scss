@@ -1,0 +1,32 @@
+.footer-section{
+
+    .address{
+        i{
+            width: 8%;
+        }
+    }
+
+    .follow-us{
+        .outline{
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+//--------- between phone and tablet --------
+
+
+@media((min-width: 426px) and (max-width: 768px)){
+    .footer-section{
+        .footer-container{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 4rem;
+        }
+    }
+}
